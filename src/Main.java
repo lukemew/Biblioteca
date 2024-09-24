@@ -7,12 +7,9 @@ public class Main {
         autor.setNome("João Marrocos");
         autor.setIdade(21);
 
-        CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
-
         Ebook ebook = new Ebook(autor);
         ebook.setNome("CDI");
-
-        carrinho.adiciona(ebook);
+        ebook.setValor(29.90);
 
         Livro livro = new LivroFisico(autor);
         livro.setNome("Java 8 Prático");
@@ -20,10 +17,12 @@ public class Main {
         livro.setValor(59.90);
         livro.setISBN("978-65-4422-23-6");
 
+        CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+
+        carrinho.adiciona(ebook);
         carrinho.adiciona(livro);
 
-        livro.mostrarDetalhes();
-
+        System.out.println("Total: " + carrinho.getTotal());
 
     }
 }
