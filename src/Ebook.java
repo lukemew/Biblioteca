@@ -25,11 +25,8 @@ public class Ebook extends Livro implements Promocional {
         } else {
             double desconto = getValor() * porcentagem;
             setValor(getValor() - desconto);
-            System.out.println("Desconto aplicado no LivroFisico");
+            System.out.println("Desconto aplicado no Ebook");
             return true;
         }
     }
-
-
-
 }

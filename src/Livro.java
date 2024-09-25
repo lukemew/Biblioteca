@@ -53,7 +53,7 @@ public abstract class Livro implements Produto {
     }
 
     public void setValor(double valor) {
-        this.valor += valor;
+        this.valor = valor;
     }
 
     public double getValor() {
