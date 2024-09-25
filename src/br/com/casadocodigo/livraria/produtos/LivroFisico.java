@@ -1,5 +1,8 @@
-public class LivroFisico extends Livro implements Promocional {
+package br.com.casadocodigo.livraria.produtos;
 
+import br.com.casadocodigo.livraria.Autor;
+
+public class LivroFisico extends Livro implements Promocional {
 
     public LivroFisico(Autor autor){
         super(autor);
@@ -16,7 +19,7 @@ public class LivroFisico extends Livro implements Promocional {
         } else {
             double desconto = getValor() * porcentagem;
             setValor(getValor() - desconto);
-            System.out.println("Desconto aplicado no LivroFisico");
+            System.out.println("Desconto aplicado no br.com.casadocodigo.livraria.produtos.LivroFisico");
             return true;
         }
     }

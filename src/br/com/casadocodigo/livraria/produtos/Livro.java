@@ -1,3 +1,7 @@
+package br.com.casadocodigo.livraria.produtos;
+
+import br.com.casadocodigo.livraria.Autor;
+
 public abstract class Livro implements Produto {
     private String titulo;
     private String descricao;
@@ -18,8 +22,7 @@ public abstract class Livro implements Produto {
     }
 
     public void mostrarDetalhes() {
-
-        System.out.println("Exibindo Informações do Livro:");
+        System.out.println("Exibindo Informações do br.com.casadocodigo.livraria.produtos.Livro:");
         if (this.titulo.length() < 2) {
             System.out.println("Título Inválido");
         } else {
@@ -33,10 +36,7 @@ public abstract class Livro implements Produto {
         System.out.println("--");
 
         if (autor != null) {
-            System.out.println("Exibindo informações do Autor:");
-            System.out.println("Autor: " + this.autor.nome);
-            System.out.println("Idade: " + this.autor.idade);
-            System.out.println("------------");
+            autor.mostrarDetalhes();
         }
     }
 

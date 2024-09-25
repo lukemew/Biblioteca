@@ -1,3 +1,10 @@
+package br.com.casadocodigo.livraria.teste;
+
+import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.livraria.produtos.Ebook;
+import br.com.casadocodigo.livraria.produtos.Livro;
+import br.com.casadocodigo.livraria.produtos.LivroFisico;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -22,6 +29,8 @@ public class Main {
         carrinho.adiciona(ebook);
         carrinho.adiciona(livro);
 
+        livro.mostrarDetalhes();
+        autor.mostrarDetalhes();
         System.out.println("Total: " + carrinho.getTotal());
 
     }
