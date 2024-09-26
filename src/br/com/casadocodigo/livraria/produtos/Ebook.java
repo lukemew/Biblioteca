@@ -29,7 +29,7 @@ public class Ebook extends Livro implements Promocional {
         } else {
             double desconto = getValor() * porcentagem;
             setValor(getValor() - desconto);
-            System.out.println("Desconto aplicado no br.com.casadocodigo.livraria.produtos.Ebook");
+            System.out.println("Desconto aplicado no Ebook");
             return true;
         }
     }

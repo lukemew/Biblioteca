@@ -4,6 +4,9 @@ import br.com.casadocodigo.livraria.Autor;
 import br.com.casadocodigo.livraria.produtos.Ebook;
 import br.com.casadocodigo.livraria.produtos.Livro;
 import br.com.casadocodigo.livraria.produtos.LivroFisico;
+import br.com.casadocodigo.livraria.produtos.Produto;
+
+import java.io.FileNotFoundException;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -25,13 +28,23 @@ public class Main {
         livro.setISBN("978-65-4422-23-6");
 
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
-
-        carrinho.adiciona(ebook);
         carrinho.adiciona(livro);
+        carrinho.adiciona(ebook);
 
-        livro.mostrarDetalhes();
-        autor.mostrarDetalhes();
-        System.out.println("Total: " + carrinho.getTotal());
+        Produto[] produtos = carrinho.getProdutos();
+
+        for(int i = 0; i < produtos.length; i++){
+            try {
+                Produto produto = produtos[i];
+                if(produto != null){
+                    System.out.println("Adicionando: " + produto.getNome() + ": R$" + produto.getValor());
+                }
+            } catch (Exception e){
+                System.out.println("Deu erro no índice" + i + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+
 
     }
 }

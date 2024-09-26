@@ -22,7 +22,7 @@ public abstract class Livro implements Produto {
     }
 
     public void mostrarDetalhes() {
-        System.out.println("Exibindo Informações do br.com.casadocodigo.livraria.produtos.Livro:");
+        System.out.println("Exibindo Informações do Livro:");
         if (this.titulo.length() < 2) {
             System.out.println("Título Inválido");
         } else {
@@ -42,6 +42,10 @@ public abstract class Livro implements Produto {
 
     public void setNome(String nome) {
         this.titulo = nome;
+    }
+
+    public String getNome(){
+        return this.titulo;
     }
 
     public void setDescricao(String descricao) {
